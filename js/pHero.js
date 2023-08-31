@@ -29,10 +29,10 @@ const handleLoadCatagory = async (catagoryId) => {
     const showCatagory = document.getElementById('show-catagory');
     showCatagory.innerText = '';
     dataItems.forEach(item => {
-        console.log(item);
+        //console.log(item);
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card bg-base-100 w-[312px] ">
+        <div class="card bg-base-100 w-[312px]  mx-auto md:mx-0">
             <figure>
             <img src="${item.thumbnail}" class="rounded-xl w-full h-[200px]"/>
             </figure>
