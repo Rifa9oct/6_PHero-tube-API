@@ -43,17 +43,22 @@ const handleLoadCatagory = async (catagoryId) => {
     else{
         dataItems.forEach(item => {
             const div = document.createElement('div');
+            let value = item.others.posted_date;
             div.innerHTML = `
             <div class="card bg-base-100 w-[312px]  mx-auto md:mx-0">
                 <figure>
-                <img src="${item.thumbnail}" class="rounded-xl w-full h-[200px]"/>
+                <img src="${item.thumbnail}" class="relative rounded-xl w-full h-[200px]"/>
                 </figure>
+                
+                 <h1 id="remove-class" class="text-[10px] top-[150px] right-4 text-white  absolute  text-center bg-black px-3 py-2 rounded-md">${postedDateHandeler(value)? postedDateHandeler(value):''}</h1>
+
                 <div class="flex gap-3 mt-5">
                     <img src="${item.authors[0].profile_picture}" class="rounded-full h-10 w-10">
                     <div>
                         <h1 class="font-bold">${item.title}</h1>
                         <div class="flex gap-2 my-2">
                             <p class="text-[#171717b3] text-sm">${item.authors[0].profile_name}</p>
+                            <h1>${item.authors[0].verified? '<img class="w-5 h-5" src="images/varification.png">':''} </h1>
                         </div>
                         <h3 class="text-[#171717b3] text-sm pb-6">${item.others.views}</h3>
                     </div>
@@ -63,6 +68,27 @@ const handleLoadCatagory = async (catagoryId) => {
             showCatagory.appendChild(div);
         });
     }
+}
+
+// calculate posted_date 
+const postedDateHandeler = (value) => {
+    const seconds = parseInt(value);
+    const hours = parseInt(seconds / 3600);
+    const remainder = seconds % 3600;
+    const minutes = parseInt(remainder / 60);
+    if(!isNaN(hours) && !isNaN(minutes)){
+        return (`${hours}hrs ${minutes} min ago`);
+    }
+    else{
+        return 0;
+    }  
+}
+
+// Sort by view handle function
+const sortByViewHandelere = () => {
+    console.log('i am clicked');
+
+
 }
 
 
