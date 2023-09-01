@@ -38,7 +38,7 @@ const handleLoadCatagory = async (catagoryId) => {
         <img src="images/Icon.png" class="mx-auto mb-8">
         <h1 class="text-center font-bold text-[32px]">Oops!! Sorry, There is no<br>content here</h1>
         `;
-        showCatagoryTwo .appendChild(div);
+        showCatagoryTwo.appendChild(div);
     }
     else{
         dataItems.forEach(item => {
@@ -85,9 +85,8 @@ const postedDateHandeler = (value) => {
 }
 
 // Sort by view handle function
-const sortByViewHandelere = () => {
+const clickeSort = (viewsItem) => {
    
-
 }
 
 
