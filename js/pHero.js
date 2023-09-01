@@ -86,7 +86,7 @@ const postedDateHandeler = (value) => {
 
 // Sort by view handle function
 const sortByViewHandelere = () => {
-    console.log('i am clicked');
+   
 
 }
 
@@ -97,5 +97,3 @@ const  blog = () => {
     window.location.href ="qus-ans-html/index.html";
 }
 loadData();
-
-
