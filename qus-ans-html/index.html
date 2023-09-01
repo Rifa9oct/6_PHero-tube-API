@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Questions</title>
+    <!-- Tailwind & DaisyUi link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    <h1>Blog Questions ans</h1>
+<body class="mx-28">
+    <h1 class="text-3xl font-bold  my-8">Qus-1: Discuss the scope of var, let, and const.</h1>
+    <h2 class="text-3xl font-bold underline underline-offset-4">Ans:</h3>
+    <!-- var description -->
+    <div class="ml-8 ">
+        <h3 class="font-bold text-2xl text-blue-500 mt-8">1.var:</h3>
+        <ul class="my-4 list-disc ml-6">
+            <li><span class="text-xl font-medium">Scope:</span> Function-scoped or globally scoped, but not block-scoped.</li>
+            <li class="w-[800px]"><span class="text-xl font-medium">Hoisting:</span> Variables declared with '<span class="font-bold">var</span>' are hoisted to the top of their containing function or global scope. This means that we can use a '<span class="font-bold">var</span>' variable before it's declared in the code.</li>
+            <li><span class="text-xl font-medium">Reassignment:</span> We can reassign and update the value of a '<span class="font-bold">var</span>' variable.</li>
+            <div>
+                <li class="text-xl font-medium">Example:</li>
+                <img class="w-[800px] mt-4 mb-16" src="images/var.png" >
+            </div>
+        </ul>
+    </div>
+    <!-- let description -->
+    <div class="ml-8">
+        <h3 class="font-bold text-2xl text-blue-500">1.let:</h3>
+        <ul class="my-4 list-disc ml-6">
+            <li><span class="text-xl font-medium">Scope:</span> Block-scoped, just like '<span class="font-bold">let</span>'.</li>
+            <li class="w-[800px]"><span class="text-xl font-medium">Hoisting:</span>  Variables declared with '<span class="font-bold">let</span>' are also hoisted, but they are not initialized until the declaration statement is executed. This means we can't use a '<span class="font-bold">let</span>' variable before it's declared.</li>
+            <li><span class="text-xl font-medium">Reassignment:</span> We can reassign and update the value of a let variable.</li>
+            <div>
+                <li class="text-xl font-medium">Example:</li>
+                <img class="w-[800px] mt-4 mb-16" src="images/let.png" >
+            </div>
+        </ul>
+    </div>
+    <!-- const description -->
+    <div class="ml-8">
+        <h3 class="font-bold text-2xl text-blue-500">1.const:</h3>
+        <ul class="my-4 list-disc ml-6">
+            <li><span class="text-xl font-medium">Scope:</span>Block-scoped, just like '<span class="font-bold">let</span>'.</li>
+            <li class="w-[800px]"><span class="text-xl font-medium">Hoisting:</span>  Variables declared with '<span class="font-bold">const</span>' are also hoisted, but like '<span class="font-bold">let</span>', they are not initialized until the declaration statement is executed.</li>
+            <li class="w-[800px]"><span class="text-xl font-medium">Reassignment:</span> Variables declared with '<span class="font-bold">const</span>' are constants and cannot be reassigned once they are given a value. However, if the value is an object or an array, we can still modify the properties or elements of that object or array.</li>
+            <div>
+                <li class="text-xl font-medium">Example:</li>
+                <img class="w-[800px] mt-4 mb-16" src="images/const.png" >
+            </div>
+        </ul>
+    </div>
+
 </body>
 </html>
