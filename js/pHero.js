@@ -4,9 +4,9 @@ const loadData = async () => {
     const dataInfo = data.data;
 
     const catagorysContainer = document.getElementById('catagory-container');
+    handleLoadCatagory('1000');
     dataInfo.forEach(catagory => {
         const div = document.createElement('div');
-        handleLoadCatagory('1000');
         if (catagory.category_id === '1000') {
             div.innerHTML = `
             <a onclick="handleLoadCatagory(${catagory.category_id})" class="tab tab-active  rounded text-base font-medium text-white text-[252525b3]  bg-red-500">${catagory.category}</a>
@@ -29,29 +29,40 @@ const handleLoadCatagory = async (catagoryId) => {
 
     const showCatagory = document.getElementById('show-catagory');
     showCatagory.innerText = '';
-
-    dataItems.forEach(item => {
-        console.log(item);
-    const div = document.createElement('div');
-    div.innerHTML = `
-    <div class="card bg-base-100 w-[312px]  mx-auto md:mx-0">
-        <figure>
-        <img src="${item.thumbnail}" class="rounded-xl w-full h-[200px]"/>
-        </figure>
-        <div class="flex gap-3 mt-5">
-            <img src="${item.authors[0].profile_picture}" class="rounded-full h-10 w-10">
-            <div>
-                <h1 class="font-bold">${item.title}</h1>
-                <div class="flex gap-2 my-2">
-                    <p class="text-[#171717b3] text-sm">${item.authors[0].profile_name}</p>
+    const showCatagoryTwo = document.getElementById('show-catagory-2');
+    showCatagoryTwo.innerText = '';
+    
+    if(dataItems.length === 0){
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <img src="images/Icon.png" class="mx-auto mb-8">
+        <h1 class="text-center font-bold text-[32px]">Oops!! Sorry, There is no<br>content here</h1>
+        `;
+        showCatagoryTwo .appendChild(div);
+    }
+    else{
+        dataItems.forEach(item => {
+            const div = document.createElement('div');
+            div.innerHTML = `
+            <div class="card bg-base-100 w-[312px]  mx-auto md:mx-0">
+                <figure>
+                <img src="${item.thumbnail}" class="rounded-xl w-full h-[200px]"/>
+                </figure>
+                <div class="flex gap-3 mt-5">
+                    <img src="${item.authors[0].profile_picture}" class="rounded-full h-10 w-10">
+                    <div>
+                        <h1 class="font-bold">${item.title}</h1>
+                        <div class="flex gap-2 my-2">
+                            <p class="text-[#171717b3] text-sm">${item.authors[0].profile_name}</p>
+                        </div>
+                        <h3 class="text-[#171717b3] text-sm pb-6">${item.others.views}</h3>
+                    </div>
                 </div>
-                <h3 class="text-[#171717b3] text-sm pb-6">${item.others.views}</h3>
             </div>
-        </div>
-    </div>
-    `;
-    showCatagory.appendChild(div);
-    });
+            `;
+            showCatagory.appendChild(div);
+        });
+    }
 }
 
 
