@@ -50,7 +50,7 @@ const handleLoadCatagory = async (catagoryId) => {
                 <img src="${item.thumbnail}" class="relative rounded-xl w-full h-[200px]"/>
                 </figure>
                 
-                 <h1 id="remove-class" class="text-[10px] top-[150px] right-4 text-white  absolute  text-center bg-black px-3 py-2 rounded-md">${postedDateHandeler(value)? postedDateHandeler(value):''}</h1>
+                <h1 class="text-[10px] top-[150px] right-4 text-white absolute text-center px-3 py-2 rounded-md ${postedDateHandeler(value) ? 'bg-black':''}">${postedDateHandeler(value) ? postedDateHandeler(value):''}</h1>
 
                 <div class="flex gap-3 mt-5">
                     <img src="${item.authors[0].profile_picture}" class="rounded-full h-10 w-10">
@@ -88,7 +88,6 @@ const postedDateHandeler = (value) => {
 const sortByViewHandelere = () => {
     console.log('i am clicked');
 
-
 }
 
 
@@ -97,5 +96,6 @@ const  blog = () => {
     const blogId = document.getElementById('blog-id');
     window.location.href ="qus-ans-html/index.html";
 }
-
 loadData();
+
+
