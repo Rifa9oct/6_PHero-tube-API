@@ -3,7 +3,6 @@ const loadData = async () => {
     const data = await res.json();
     const dataInfo = data.data;
 
-
     const catagorysContainer = document.getElementById('catagory-container');
     dataInfo.forEach(catagory => {
         const div = document.createElement('div');
@@ -30,7 +29,9 @@ const handleLoadCatagory = async (catagoryId) => {
 
     const showCatagory = document.getElementById('show-catagory');
     showCatagory.innerText = '';
+
     dataItems.forEach(item => {
+        console.log(item);
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="card bg-base-100 w-[312px]  mx-auto md:mx-0">
@@ -50,10 +51,14 @@ const handleLoadCatagory = async (catagoryId) => {
     </div>
     `;
     showCatagory.appendChild(div);
-
     });
 }
 
 
+// Blog btn handeler function
+const  blog = () => {
+    const blogId = document.getElementById('blog-id');
+    window.location.href ="qus-ans-html/index.html";
+}
 
 loadData();
