@@ -15,7 +15,7 @@ const loadData = async () => {
         }
         else {
             div.innerHTML = `
-            <a onclick="showCatagory('${catagory.category_id}')" class="tab tab-active rounded text-base font-medium text-[252525b3]  bg-[#25252526]">${catagory.category}</a>
+            <a onclick="showCatagory('${catagory.category_id}')" class="tab tab-active rounded text-base font-medium text-[252525b3] bg-[#25252526]">${catagory.category}</a>
             `;
         }
         catagorysContainer.appendChild(div);

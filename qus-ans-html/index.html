@@ -21,7 +21,7 @@
             <h3 class="font-bold text-2xl text-blue-500 mt-8">1.var:</h3>
             <ul class="my-4 list-disc ml-6">
                 <li><span class="text-xl font-medium">Scope:</span> Function-scoped or globally scoped, but not block-scoped.</li>
-                <li class="w-[300px] md:w-[600px] lg:w-[800px]"><span class="text-xl font-medium">Hoisting:</span> Variables declared with '<span class="font-bold">var</span>' are hoisted to the top of their containing function or global scope. This means that we can use a '<span class="font-bold">var</span>' variable before it's declared in the code.</li>
+                <li class="w-[300px] md:w-[600px] lg:w-[800px]"><span class="text-xl font-medium">Hoisting:</span> Variables declared with '<span class="font-bold">var</span>' are hoisted to the top of their global or local scope,which makes them accessible before the line they are declared. This means that we can use a '<span class="font-bold">var</span>' variable before it's declared in the code.</li>
                 <li><span class="text-xl font-medium">Reassignment:</span> We can reassign and update the value of a '<span class="font-bold">var</span>' variable.</li>
                 <div>
                     <li class="text-xl font-medium">Example:</li>
@@ -33,9 +33,9 @@
         <div class="ml-8">
             <h3 class="font-bold text-2xl text-blue-500">1.let:</h3>
             <ul class="my-4 list-disc ml-6">
-                <li><span class="text-xl font-medium">Scope:</span> Block-scoped, just like '<span class="font-bold">let</span>'.</li>
+                <li class="w-[300px] md:w-[600px] lg:w-[800px]"><span class="text-xl font-medium">Scope:</span> The scope of a '<span class="font-bold">let</span>' variable is global,local, or block scope. Block scope is for variables declared in a block.exp: if,loop,switch and a couple of other statements</li>
                 <li class="w-[300px] md:w-[600px] lg:w-[800px]"><span class="text-xl font-medium">Hoisting:</span>  Variables declared with '<span class="font-bold">let</span>' are also hoisted, but they are not initialized until the declaration statement is executed. This means we can't use a '<span class="font-bold">let</span>' variable before it's declared.</li>
-                <li><span class="text-xl font-medium">Reassignment:</span> We can reassign and update the value of a let variable.</li>
+                <li class="w-[300px] md:w-[600px] lg:w-[800px]"><span class="text-xl font-medium">Reassignment:</span> Just like '<span class="font-bold">var</span>' variables declared with '<span class="font-bold">let</span>' can be reassigned to other values, but they can not be redeclared.</li>
                 <div>
                     <li class="text-xl font-medium">Example:</li>
                     <img class="w-[300px] md:w-[600px] lg:w-[800px] mt-4 mb-16" src="images/let.png" >
@@ -76,7 +76,7 @@
             <ul class="my-4 list-decimal ml-6 w-[300px] md:w-[600px] lg:w-[800px]">
                 <li><span class="text-xl font-medium">Implicit Absence of Value: </span>Undefined typically represents the absence of a value when a variable or property has not been assigned a value or has not been declared.</li>
                 <li><span class="text-xl font-medium">Function Parameters:  </span>Parameters that are not provided when calling a function are automatically set to undefined.</li>
-                <li><span class="text-xl font-medium">Property Access: </span>If you try to access a property that doesn't exist in an object, it returns undefined.
+                <li><span class="text-xl font-medium">Property Access: </span>If we try to access a property that doesn't exist in an object, it returns undefined.
                 </li>
             </ul>
         </div>
@@ -84,7 +84,7 @@
 
     <!-- qus-3 section -->
     <section>
-        <h1 class="text-3xl font-bold text-red-500 my-8">Qus-2: What do you mean by REST API?</h1>
+        <h1 class="text-3xl font-bold text-red-500 my-8">Qus-3: What do you mean by REST API?</h1>
         <h2 class="text-3xl font-bold underline underline-offset-4">Ans:</h2>
         <p class="text-lg font-medium w-[300px] md:w-[600px] lg:w-[800px] mt-8  ml-8 my-8">REST, or Representational State Transfer, is a style of software architecture that defines a set of constraints to be used when creating web services. A RESTful API is an API that adheres to these constraints. RESTful APIs use HTTP requests to GET, POST, PUT, and DELETE data. They are designed to be stateless, meaning that each request contains all the information necessary to complete it. RESTful APIs are widely used because they are simple, flexible, and scalable.</p>
         <p class="text-lg font-medium w-[300px] md:w-[600px] lg:w-[800px] mt-8  ml-8 mb-12">REST APIs communicate via HTTP requests to perform standard database functions like creating, reading, updating, and deleting records (also known as CRUD) within a resource. For example, a REST API would use a GET request to retrieve a record, a POST request to create one, a PUT request to update a record, and a DELETE request to delete one. All HTTP methods can be used in API calls. A well-designed REST API is similar to a website running in a web browser with built-in HTTP functionality.</p>
