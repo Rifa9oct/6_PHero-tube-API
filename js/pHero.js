@@ -8,19 +8,11 @@ const loadData = async () => {
     showCatagory('1000');
     dataInfo.forEach(catagory => {
         const div = document.createElement('div');
-        if (catagory.category_id === '1000') {
-            div.innerHTML = `
-            <a onclick="showCatagory('${catagory.category_id}')" class="tab tab-active  rounded text-base font-medium text-white text-[252525b3]  bg-red-500">${catagory.category}</a>
-            `;
-        }
-        else {
-            div.innerHTML = `
-            <a onclick="showCatagory('${catagory.category_id}')" class="tab tab-active rounded text-base font-medium text-[252525b3] bg-[#25252526]">${catagory.category}</a>
-            `;
-        }
+        div.innerHTML = `
+        <a onclick="showCatagory('${catagory.category_id}')" class="tab tab-active rounded text-basefont-medium ${catagory.category_id ==='1000'? 'text-white':'text-[252525b3]'} ${catagory.category_id ==='1000'? 'bg-red-500':'bg-[#25252526]'} ">${catagory.category}</a>
+        `;
         catagorysContainer.appendChild(div);
     });
-
 };
 
 const showCatagory = async (catagoryId) => {
