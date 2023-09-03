@@ -12,7 +12,7 @@ const loadData = async () => {
         const li = document.createElement('li');
         li.classList
         li.innerHTML = `
-        <a onclick="showCatagory('${catagory.category_id}')" class="text-base font-medium rounded px-5 py-2">${catagory.category}</a>
+        <a onclick="showCatagory('${catagory.category_id}')" class="cursor-pointer text-base font-medium rounded px-5 py-2">${catagory.category}</a>
         `;
         catagorysContainer.appendChild(li);  
         const first_a = document.querySelector('ul li a');
