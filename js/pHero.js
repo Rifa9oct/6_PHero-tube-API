@@ -6,12 +6,27 @@ const loadData = async () => {
     
     const catagorysContainer = document.getElementById('catagory-container');
     showCatagory('1000');
-    dataInfo.forEach(catagory => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-        <a onclick="showCatagory('${catagory.category_id}')" class="tab tab-active rounded text-basefont-medium ${catagory.category_id ==='1000'? 'text-white':'text-[252525b3]'} ${catagory.category_id ==='1000'? 'bg-red-500':'bg-[#25252526]'} ">${catagory.category}</a>
+    let catchUl = document.getElementById('catagory-container');
+    console.log(catchUl)
+    dataInfo.forEach(catagory => { 
+        const li = document.createElement('li');
+        li.classList
+        li.innerHTML = `
+        <a onclick="showCatagory('${catagory.category_id}')" class="text-base font-medium rounded px-5 py-2">${catagory.category}</a>
         `;
-        catagorysContainer.appendChild(div);
+        catagorysContainer.appendChild(li);  
+        const first_a = document.querySelector('ul li a');
+        first_a.classList.add('active');
+
+        //activate the category Tabs
+        const li_a =li.querySelector('a');
+        const li_a_All = document.querySelectorAll('li a');
+        li_a_All.forEach(liActive => {
+            li_a.addEventListener('click', () => {
+                catchUl.querySelector('.active').classList.remove('active');
+                liActive.classList.add('active');
+            });
+        });
     });
 };
 
