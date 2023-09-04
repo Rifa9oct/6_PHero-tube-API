@@ -69,7 +69,7 @@ const showCatagory = async (catagoryId) => {
                             <p class="text-[#171717b3] text-sm">${item.authors[0].profile_name}</p>
                             <h1>${item.authors[0].verified? '<img class="w-5 h-5" src="images/varification.png">':''} </h1>
                         </div>
-                        <h3 class="text-[#171717b3] text-sm pb-6">${item.others.views}</h3>
+                        <h3 class="text-[#171717b3] text-sm pb-6">${item.others.views} views</h3>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@ const updateDisplay = () => {
                             <p class="text-[#171717b3] text-sm">${item.authors[0].profile_name}</p>
                             <h1>${item.authors[0].verified? '<img class="w-5 h-5" src="images/varification.png">':''} </h1>
                         </div>
-                        <h3 class="text-[#171717b3] text-sm pb-6">${item.others.views}</h3>
+                        <h3 class="text-[#171717b3] text-sm pb-6">${item.others.views} views</h3>
                     </div>
                 </div>
             </div>
